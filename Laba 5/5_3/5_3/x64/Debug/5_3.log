@@ -1,0 +1,5 @@
+﻿  Source.c
+D:\LABA5\5_3\5_3\Source.c(41,12): warning C4047: return: "int *" отличается по уровням косвенного обращения от "int **"
+D:\LABA5\5_3\5_3\Source.c(115,21): warning C4047: =: "int **" отличается по уровням косвенного обращения от "int *"
+D:\LABA5\5_3\5_3\Source.c(95): warning C4716: findLongestPositive: должна возвращать значение
+  5_3.vcxproj -> D:\LABA5\5_3\x64\Debug\5_3.exe
