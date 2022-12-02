@@ -1,0 +1,7 @@
+﻿  Source.c
+D:\Laba4\4_1\4_1\Source.c(18,2): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+D:\Laba4\4_1\4_1\Source.c(18,8): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+D:\Laba4\4_1\4_1\Source.c(21,16): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+D:\Laba4\4_1\4_1\Source.c(100,32): warning C4101: j: неиспользованная локальная переменная
+D:\Laba4\4_1\4_1\Source.c(100,29): warning C4101: i: неиспользованная локальная переменная
+  4_1.vcxproj -> D:\Laba4\4_1\x64\Debug\4_1.exe
