@@ -1,6 +1,0 @@
-﻿  Source.c
-D:\Laba3\3_3\3_3\Source.c(79,3): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
-D:\Laba3\3_3\3_3\Source.c(79,9): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
-D:\Laba3\3_3\3_3\Source.c(81,11): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
-D:\Laba3\3_3\3_3\Source.c(86,3): warning C4013: system: нет определения; предполагается "extern" с возвратом типа "int"
-  3_3.vcxproj -> D:\Laba3\3_3\x64\Debug\3_3.exe
