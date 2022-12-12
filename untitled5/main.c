@@ -114,7 +114,7 @@ int myf(char* str)
 int Correct_input_task(void) {
     int N;
     printf(">");
-    while (scanf_s("%d", &N) != 1 || N > 3 ||  N < 0)
+    while (scanf("%d", &N) != 1 || N > 3 ||  N < 0)
     {
         printf("Incorrect input.Try again!\n");
         printf(">");
@@ -182,9 +182,9 @@ void Task2()
         printf("\nInput second string::");
         s2 = getStr1(s2);
         printf("Enter k::");
-        scanf_s("%d", &k);
+        scanf("%d", &k);
         printf("\nEnter m::");
-        scanf_s("%d", &m);
+        scanf("%d", &m);
         s1 = str_cat(s1, s2, k, m);
         outStr(s1);
     } while (contCheck() != 1);
