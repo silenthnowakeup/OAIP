@@ -133,23 +133,20 @@ int contCheck() {
 }
 
 void Task1()
-{
-            char *str;
+{ 
             printf("Input your string::");
-            str = getStr(str);
+            char *str = getStr(str);
             printf("\nsumma = %d \n", myf(str));
 }
 
 void Task2()
 {
-        char* s1;
-        char* s2;
         int k;
         int m;
         printf("Input first string::");
-        s1 = getStr(s1);
+        char* s1 = getStr(s1);
         printf("\nInput second string::");
-        s2 = getStr(s2);
+        char* s2 = getStr(s2);
         printf("Enter k::");
         scanf("%d", &k);
         printf("\nEnter m::");
