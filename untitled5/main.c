@@ -74,7 +74,7 @@ int myf(char* str)
     {
         if (i == 0 || str[i - 1] >= 'a' && str[i] <= 'z' || str[i - 1] >= 'A' && str[i] <= 'Z' || str[i - 1] == ' ')
         {
-            znak = ((str[i] == '-')) ? -1 : 1;
+            znak = (str[i] == '-') ? -1 : 1;
         }
         if (str[i] == '+' || str[i] == '-')
             i++;
