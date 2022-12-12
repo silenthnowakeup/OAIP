@@ -15,7 +15,7 @@ char* getStr(char* s1)
         if (i > 15)
         {
             size += 2;
-            s1 = (char*)realloc(s1, size * sizeof(char));
+            s1 = (char*)realloc(s1, (size+prSize) * sizeof(char));
         }
     }
     s1[i] = '\0';
@@ -67,14 +67,14 @@ char* str_cat(char* s1, char* s2, int k, int m)
 int myf(char* str)
 {
     int size = str_len(str);
-    int sum = 0; 
+    int sum = 0;
     int n = 0;
     int znak = 1;
     for (int i = 0; i < size + 1; i++)
     {
         if (i == 0 || str[i - 1] >= 'a' && str[i] <= 'z' || str[i - 1] >= 'A' && str[i] <= 'Z' || str[i - 1] == ' ')
         {
-            znak = ((str[i] == '-')) ? -1 : 1;
+            znak = (str[i] == '-') ? -1 : 1;
         }
         if (str[i] == '+' || str[i] == '-')
             i++;
@@ -97,7 +97,7 @@ int myf(char* str)
 int Correct_input_task(void) {
     int N;
     printf(">");
-    while (scanf("%d", &N) != 1 || N > 3 ||  N < 0)
+    while (scanf("%d", &N) != 1 || N > 2 ||  N < 0)
     {
         printf("Incorrect input.Try again!\n");
         printf(">");
@@ -134,17 +134,14 @@ int contCheck() {
 
 void Task1()
 {
-
-        char* str;
-        printf("Input your string::");
-        str = getStr(str);
-        printf("\nsumma = %d \n", myf(str));
+            char *str;
+            printf("Input your string::");
+            str = getStr(str);
+            printf("\nsumma = %d \n", myf(str));
 }
 
 void Task2()
 {
-    /*do
-    {*/
         char* s1;
         char* s2;
         int k;
@@ -159,7 +156,6 @@ void Task2()
         scanf("%d", &m);
         s1 = str_cat(s1, s2, k, m);
         outStr(s1);
-    /*} while (contCheck() != 1);*/
 }
 
 void endTask()
