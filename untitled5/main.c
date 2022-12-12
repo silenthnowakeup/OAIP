@@ -76,8 +76,6 @@ int myf(const char* str)
         {
             znak = (str[i] == '-') ? -1 : 1;
         }
-        if (str[i] == '+' || str[i] == '-')
-            i++;
 
         if (str[i] >= '0' && str[i] <= '9')
         {
