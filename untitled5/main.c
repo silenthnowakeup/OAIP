@@ -144,7 +144,8 @@ void Task2()
 {
         char* s1;
         char* s2;
-        int k, m;
+        int k;
+        int m;
         printf("Input first string::");
         s1 = getStr(s1);
         printf("\nInput second string::");
