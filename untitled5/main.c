@@ -15,8 +15,8 @@ char* getStr()
         i++;
         if (i > 15)
         {
-            size *= 2;
-            s1 = (char*)realloc(s1, size * sizeof(char));
+            size += 2;
+            s1 = (char*)realloc(s1, (size + prSize) * sizeof(char));
         }
     }
     s1[i] = '\0';
