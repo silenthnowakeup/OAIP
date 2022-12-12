@@ -29,7 +29,6 @@ void outStr(char* str)
         printf("%c", str[i]);
         i++;
     }
-    //printf("\n");
 }
 
 int str_len(char* s1)
@@ -46,7 +45,7 @@ char* getStr2(char* s2)
 {
     char temp;
     int i = 0;
-    while ((temp = getchar()) != EOF && temp != '\n')
+    while ((temp = getchar()) != '\n' && temp != EOF)
     {
         s2[i] = temp;
         i++;
@@ -59,7 +58,9 @@ char* getStr2(char* s2)
 char* str_cat(char* s1, char* s2, int k, int m)
 {
     char* s;
-    int i, len1 = str_len(s1), len2 = str_len(s2);
+    int i;
+    int len1 = str_len(s1);
+    int len2 = str_len(s2);
 
     if (k > len1) k = len1;
     if ((s = (char*)malloc((len1 + len2) * sizeof(char))) == NULL)
