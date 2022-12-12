@@ -1,20 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//
-// Created by stasc on 02.12.2022.
-//
-
-//#include "StaticLib.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 char* getStr1(char* s1)
 {
     char temp;
     int i = 0;
     int size = 256;
-    while ((temp = getchar()) != EOF && temp != '\n')
+    while ((temp = getchar()) != '\n' && temp != EOF)
     {
         s1[i] = temp;
         i++;
