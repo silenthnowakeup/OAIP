@@ -96,7 +96,7 @@ int myf(char* str)
 int Correct_input_task(void) {
     int N;
     printf(">");
-    while (scanf("%d", &N) != 1 || N > 3 ||  N < 0)
+    while (scanf("%d", &N) != 1 || N > 2 ||  N < 0)
     {
         printf("Incorrect input.Try again!\n");
         printf(">");
