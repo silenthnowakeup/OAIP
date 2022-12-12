@@ -1,21 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char* getStr(char* s1)
+char* getStr()
 {
+    char* s1;
     char temp;
     int i = 0;
     int prSize = 16;
     int size = 0;
+    int totalSize;
     s1 = (char*)calloc(prSize,sizeof(char));
-    while ((temp = getchar()) != '\n' && temp != EOF)
+    while ((temp = getchar()) != EOF && temp != '\n')
     {
         s1[i] = temp;
         i++;
         if (i > 15)
         {
             size += 2;
-            s1 = (char*)realloc(s1, size * sizeof(char));
+            totalSize = size+ prSize;
+            s1 = (char*)realloc(s1, totalSize * sizeof(char));
         }
     }
     s1[i] = '\0';
@@ -33,7 +36,7 @@ void outStr(char* str)
     }
 }
 
-int str_len(char* s1)
+int str_len(const char* s1)
 {
     int i = 0;
     while (s1[i] != '\0')
@@ -67,9 +70,7 @@ char* str_cat(char* s1, char* s2, int k, int m)
 int myf(char* str)
 {
     int size = str_len(str);
-    int sum = 0;
-    int n = 0;
-    int znak = 1;
+    int sum = 0, n = 0, znak = 1, res = 0;
     for (int i = 0; i < size + 1; i++)
     {
         if (i == 0 || str[i - 1] >= 'a' && str[i] <= 'z' || str[i - 1] >= 'A' && str[i] <= 'Z' || str[i - 1] == ' ')
@@ -97,7 +98,7 @@ int myf(char* str)
 int Correct_input_task(void) {
     int N;
     printf(">");
-    while (scanf("%d", &N) != 1 || N > 2 ||  N < 0)
+    while (scanf("%d", &N) != 1 || N > 3 ||  N < 0)
     {
         printf("Incorrect input.Try again!\n");
         printf(">");
@@ -136,7 +137,7 @@ void Task1()
 {
         char* str;
         printf("Input your string::");
-        str = getStr(str);
+        str = getStr();
         printf("\nsumma = %d \n", myf(str));
 }
 
@@ -144,12 +145,11 @@ void Task2()
 {
         char* s1;
         char* s2;
-        int k;
-        int m;
+        int k, m;
         printf("Input first string::");
-        s1 = getStr(s1);
+        s1 = getStr();
         printf("\nInput second string::");
-        s2 = getStr(s2);
+        s2 = getStr();
         printf("Enter k::");
         scanf("%d", &k);
         printf("\nEnter m::");
