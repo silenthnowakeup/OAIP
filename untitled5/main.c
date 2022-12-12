@@ -33,7 +33,7 @@ void outStr(char* str)
     }
 }
 
-int str_len(char* s1)
+int str_len(const char* s1)
 {
     int i = 0;
     while (s1[i] != '\0')
@@ -112,7 +112,7 @@ int contCheck() {
     printf("<No(N)>\n");
     printf(">");
     char temp = 0;
-    temp = getchar();
+    temp = (char)getchar();
     while ((temp = (char)getchar()) != '\n') {
         CHECK = 0;
         while (temp != 'N' && temp != 'n' && temp != 'Y' && temp != 'y')
