@@ -43,7 +43,7 @@ int str_len(const char* s1)
     return i;
 }
 
-char* str_cat(char* s1, char* s2, int k, int m)
+char* str_cat(char* s1, const char* s2, int k, int m)
 {
     char* s;
     int i;
@@ -64,7 +64,7 @@ char* str_cat(char* s1, char* s2, int k, int m)
     return s1;
 }
 
-int myf(char* str)
+int myf(const char* str)
 {
     int size = str_len(str);
     int sum = 0;
