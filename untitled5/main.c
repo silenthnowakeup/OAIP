@@ -8,7 +8,6 @@ char* getStr()
     int i = 0;
     int prSize = 16;
     int size = 0;
-    int totalSize;
     s1 = (char*)calloc(prSize,sizeof(char));
     while ((temp = getchar()) != EOF && temp != '\n')
     {
@@ -16,9 +15,8 @@ char* getStr()
         i++;
         if (i > 15)
         {
-            size += 2;
-            totalSize = size+ prSize;
-            s1 = (char*)realloc(s1, totalSize * sizeof(char));
+            size *= 2;
+            s1 = (char*)realloc(s1, size * sizeof(char));
         }
     }
     s1[i] = '\0';
