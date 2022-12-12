@@ -5,16 +5,10 @@ char* getStr1(char* s1)
 {
     char temp;
     int i = 0;
-    int size = 256;
     while ((temp = getchar()) != '\n' && temp != EOF)
     {
         s1[i] = temp;
         i++;
-        if (i > 255)
-        {
-            size += 2;
-            s1 = (char*)realloc(s1, size * sizeof(char));
-        }
     }
     s1[i] = '\0';
 
@@ -140,21 +134,12 @@ int contCheck() {
     return CHECK;
 }
 
-char* mal()
-{
-    char* str;
-    int length;
-    str = (char*)malloc(256 * sizeof(char));
-}
-
-
-
 void Task1()
 {
     do
     {
         char* str;
-        str = mal();
+        str = (char*)calloc(1,sizeof(char));
         printf("Input your string::");
         str = getStr1(str);
         printf("\nsumma = %d \n", myf(str));
@@ -168,10 +153,10 @@ void Task2()
         char* s1;
         char* s2;
         int k, m;
-        s1 = mal();
         printf("Input first string::");
+        s1 = (char*)calloc(1,sizeof(char));
         s1 = getStr1(s1);
-        s2 = mal();
+        s2 = (char*)calloc(1,sizeof(char));
         printf("\nInput second string::");
         s2 = getStr1(s2);
         printf("Enter k::");
