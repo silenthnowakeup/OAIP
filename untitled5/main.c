@@ -70,7 +70,7 @@ int myf(const char* str)
     int sum = 0;
     int n = 0;
     int znak = 1;
-    for (int i = 0; i < size + 1; i++)
+    for (int i = 0; i <= size; i++)
     {
         if (i == 0 || str[i - 1] >= 'a' && str[i] <= 'z' || str[i - 1] >= 'A' && str[i] <= 'Z' || str[i - 1] == ' ')
         {
