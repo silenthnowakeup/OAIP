@@ -8,7 +8,7 @@ char* getStr(char* s1)
     int prSize = 16;
     int size = 0;
     s1 = (char*)calloc(prSize,sizeof(char));
-    while ((temp = getchar()) != '\n' && temp != EOF)
+    while ((temp = (char)getchar()) != '\n' && temp != EOF)
     {
         s1[i] = temp;
         i++;
@@ -113,7 +113,7 @@ int contCheck() {
     printf(">");
     char temp = 0;
     temp = getchar();
-    while ((temp = getchar()) != '\n') {
+    while ((temp = (char)getchar()) != '\n') {
         CHECK = 0;
         while (temp != 'N' && temp != 'n' && temp != 'Y' && temp != 'y')
         {
