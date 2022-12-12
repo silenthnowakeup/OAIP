@@ -68,7 +68,7 @@ char* str_cat(char* s1, char* s2, int k, int m)
 int myf(char* str)
 {
     int size = str_len(str);
-    int sum = 0, n = 0, znak = 1, res = 0;
+    int sum = 0, n = 0, znak = 1;
     for (int i = 0; i < size + 1; i++)
     {
         if (i == 0 || str[i - 1] >= 'a' && str[i] <= 'z' || str[i - 1] >= 'A' && str[i] <= 'Z' || str[i - 1] == ' ')
