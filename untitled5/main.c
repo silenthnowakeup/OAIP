@@ -1,22 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char* getStr()
+char* getStr(char* s1)
 {
-    char* s1;
     char temp;
     int i = 0;
     int prSize = 16;
     int size = 0;
     s1 = (char*)calloc(prSize,sizeof(char));
-    while ((temp = getchar()) != EOF && temp != '\n')
+    while ((temp = getchar()) != '\n' && temp != EOF)
     {
         s1[i] = temp;
         i++;
         if (i > 15)
         {
             size += 2;
-            s1 = (char*)realloc(s1, (size + prSize) * sizeof(char));
+            s1 = (char*)realloc(s1, size * sizeof(char));
         }
     }
     s1[i] = '\0';
@@ -34,7 +33,7 @@ void outStr(char* str)
     }
 }
 
-int str_len(const char* s1)
+int str_len(char* s1)
 {
     int i = 0;
     while (s1[i] != '\0')
@@ -68,12 +67,14 @@ char* str_cat(char* s1, char* s2, int k, int m)
 int myf(char* str)
 {
     int size = str_len(str);
-    int sum = 0, n = 0, znak = 1, res = 0;
+    int sum = 0; 
+    int n = 0;
+    int znak = 1;
     for (int i = 0; i < size + 1; i++)
     {
         if (i == 0 || str[i - 1] >= 'a' && str[i] <= 'z' || str[i - 1] >= 'A' && str[i] <= 'Z' || str[i - 1] == ' ')
         {
-            znak = (str[i] == '-') ? -1 : 1;
+            znak = ((str[i] == '-')) ? -1 : 1;
         }
         if (str[i] == '+' || str[i] == '-')
             i++;
@@ -133,27 +134,32 @@ int contCheck() {
 
 void Task1()
 {
+
         char* str;
         printf("Input your string::");
-        str = getStr();
+        str = getStr(str);
         printf("\nsumma = %d \n", myf(str));
 }
 
 void Task2()
 {
+    /*do
+    {*/
         char* s1;
         char* s2;
-        int k, m;
+        int k;
+        int m;
         printf("Input first string::");
-        s1 = getStr();
+        s1 = getStr(s1);
         printf("\nInput second string::");
-        s2 = getStr();
+        s2 = getStr(s2);
         printf("Enter k::");
         scanf("%d", &k);
         printf("\nEnter m::");
         scanf("%d", &m);
         s1 = str_cat(s1, s2, k, m);
         outStr(s1);
+    /*} while (contCheck() != 1);*/
 }
 
 void endTask()
