@@ -1,3 +1,0 @@
-D:/Laba 7/cmake-build-debug/CMakeFiles/Laba_7.dir
-D:/Laba 7/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Laba 7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
